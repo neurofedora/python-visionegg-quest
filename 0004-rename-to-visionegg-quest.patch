@@ -1,0 +1,26 @@
+From 12ba2743f8aa5e6d08d00fa81de8c39aa0057f02 Mon Sep 17 00:00:00 2001
+From: Igor Gnatenko <i.gnatenko.brain@gmail.com>
+Date: Sat, 12 Dec 2015 16:08:00 +0100
+Subject: [PATCH 4/5] rename to visionegg-quest
+
+Signed-off-by: Igor Gnatenko <i.gnatenko.brain@gmail.com>
+---
+ setup.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/setup.py b/setup.py
+index c975dfc..759e8ec 100644
+--- a/setup.py
++++ b/setup.py
+@@ -2,7 +2,7 @@
+ from distutils.core import setup
+ 
+ setup(
+-    name='Quest',
++    name='visionegg-quest',
+     version='1.1',
+     description = "QUEST algorithm for finding threshold",
+     author = "Dennis Pelli",
+-- 
+2.6.4
+

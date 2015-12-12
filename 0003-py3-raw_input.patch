@@ -1,0 +1,46 @@
+From a758ce0876e6a0ab0dc54c91d7c286ea9a53e96a Mon Sep 17 00:00:00 2001
+From: Igor Gnatenko <i.gnatenko.brain@gmail.com>
+Date: Sat, 12 Dec 2015 16:03:05 +0100
+Subject: [PATCH 3/5] py3: raw_input
+
+Signed-off-by: Igor Gnatenko <i.gnatenko.brain@gmail.com>
+---
+ src/Quest.py | 14 ++++++++++----
+ 1 file changed, 10 insertions(+), 4 deletions(-)
+
+diff --git a/src/Quest.py b/src/Quest.py
+index 751b277..5c7500d 100644
+--- a/src/Quest.py
++++ b/src/Quest.py
+@@ -425,18 +425,24 @@ def demo():
+     tActual = None
+     while tActual is None:
+         sys.stdout.write('Specify true threshold of simulated observer: ')
+-        input = raw_input()
+         try:
+-            tActual = float(input)
++            inp = raw_input()
++        except NameError:
++            inp = input()
++        try:
++            tActual = float(inp)
+         except:
+             pass
+     
+     tGuess = None
+     while tGuess is None:
+         sys.stdout.write('Estimate threshold: ')
+-        input = raw_input()
+         try:
+-            tGuess = float(input)
++            inp = raw_input()
++        except NameError:
++            inp = input()
++        try:
++            tGuess = float(inp)
+         except:
+             pass
+     
+-- 
+2.6.4
+

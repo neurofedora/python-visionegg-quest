@@ -1,0 +1,31 @@
+From e9cc83b63e8f54caf219114e4eeff99bc3772a6a Mon Sep 17 00:00:00 2001
+From: Igor Gnatenko <i.gnatenko.brain@gmail.com>
+Date: Sat, 12 Dec 2015 16:11:14 +0100
+Subject: [PATCH 5/5] remove bool constants hack
+
+Signed-off-by: Igor Gnatenko <i.gnatenko.brain@gmail.com>
+---
+ src/Quest.py | 7 -------
+ 1 file changed, 7 deletions(-)
+
+diff --git a/src/Quest.py b/src/Quest.py
+index 5c7500d..c5143f0 100644
+--- a/src/Quest.py
++++ b/src/Quest.py
+@@ -47,13 +47,6 @@ import numpy as num
+ def getinf(x):
+     return num.nonzero( num.isinf( num.atleast_1d(x) ) )
+ 
+-# Use Python's bool constants if available, make aliases if not
+-try:
+-    True
+-except NameError:
+-    True = 1==1
+-    False = 1==0
+-
+ class QuestObject:
+     
+     """Measure threshold using a Weibull psychometric function.
+-- 
+2.6.4
+
