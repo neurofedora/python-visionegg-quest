@@ -38,7 +38,6 @@ Python 2 version.
 %package -n python3-%{modname}
 Summary:        %{summary}
 %{?python_provide:%python_provide python3-%{modname}}
-BuildRequires:  /usr/bin/2to3
 BuildRequires:  python3-devel
 Requires:       python3-numpy
 
